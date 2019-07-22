@@ -4,7 +4,7 @@ jdk:
 addons:
   apt:
     sources:
-      - ubuntu-sdk-team/ppa
+      - beineri/opt-qt5123-trusty
     packages:
       - qtbase5-dev
       - qt5-default
