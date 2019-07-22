@@ -6,6 +6,7 @@ script:
   - pip3 install conan
   - mkdir build
   - cd build
+  - conan remote add bincrafters https://api.bintray.com/conan/bincrafters/public-conan
   - conan install ..
   - source activate_run.sh
   - qmake ../PetStore/PetStore.pro
