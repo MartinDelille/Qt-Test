@@ -5,6 +5,7 @@ script:
   - source ~/virtualenv/python3.6/bin/activate
   - pip3 install conan
   - mkdir build
+  - cd build
   - conan install ..
   - source activate_run.sh
   - qmake ../PetStore/PetStore.pro
