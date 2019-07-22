@@ -1,15 +1,11 @@
 language: java
 jdk:
   - openjdk8
-addons:
-  apt:
-    sources:
-      - beineri/opt-qt5101-trusty
-    packages:
-      - qtbase5-dev
-      - qt5-default
-      - qttools5-dev-tools
 script:
-  - qmake PetStore/PetStore.pro
+  - pip3 install conan
+  - mkdir build
+  - conan install ..
+  - source activate_run.sh
+  - qmake ../PetStore/PetStore.pro
   - make
   - ./PetStore
