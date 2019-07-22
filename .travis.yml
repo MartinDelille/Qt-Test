@@ -3,8 +3,11 @@ jdk:
   - openjdk8
 addons:
   apt:
+    sources:
+      - ubuntu-sdk-team/ppa
     packages:
-      - qt5-qmake
-      - libqt5core5a
+      - qtbase5-dev
+      - qt5-default
+      - qttools5-dev-tools
 script:
   - qmake -v
