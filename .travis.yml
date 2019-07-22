@@ -1,5 +1,9 @@
 language: java
 jdk:
   - openjdk8
+addons:
+  apt:
+    packages:
+      - qt5-qmake
 script:
   - qmake -v
