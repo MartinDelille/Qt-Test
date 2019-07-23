@@ -14,6 +14,8 @@ script:
     #- conan install .. --build missing
     #- source activate_run.sh
   - qmake -v
+  - /usr/bin/qmake -v
+  - /usr/local/bin/qmake -v
   - qmake ../PetStore/PetStore.pro
   - make
   - ./PetStore
