@@ -6,17 +6,10 @@ install:
   - sudo apt-get update -qq
   - sudo apt-get install qt510-meta-minimal
 script:
-  - source /opt/qt510/qt510-env.sh
-  #  - source ~/virtualenv/python3.6/bin/activate
-  #- pip3 install conan
+  - source /opt/qt510/bin/qt510-env.sh
   - mkdir build
   - cd build
-    #- conan remote add bincrafters https://api.bintray.com/conan/bincrafters/public-conan
-    #- conan install .. --build missing
-    #- source activate_run.sh
   - qmake -v
-  - /usr/bin/qmake -v
-  - /usr/local/bin/qmake -v
   - qmake ../PetStore/PetStore.pro
   - make
   - ./PetStore
